@@ -6,8 +6,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-usernameStr = 'a7223598'
-passwordStr = 'thos29990'
+usernameStr = 'yourNumber'
+passwordStr = 'yourPassword'
 
 browser = webdriver.Chrome()
 browser.get(('https://ap1.pccu.edu.tw/index.asp?user=student'))
