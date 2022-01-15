@@ -10,7 +10,7 @@ usernameStr = 'usernameStr'
 passwordStr = 'passwordStr'
 
 browser = webdriver.Chrome()
-browser.get(('https://ap1.pccu.edu.tw/index.asp?user=student'))
+browser.get(('https://ecampus.pccu.edu.tw/ecampus/default.aspx?usertype=student'))
 
 # fill in username and hit the next button
 
@@ -21,10 +21,10 @@ username.send_keys(usernameStr)
              
 # wait for transition then continue to fill items
 password = WebDriverWait(browser, 10).until(
-    EC.presence_of_element_located((By.ID, 'PassWord')))
+    EC.presence_of_element_located((By.ID, 'Password')))
 password.send_keys(passwordStr)
  
-signInButton = browser.find_element_by_css_selector("span[title=\"登入專區\"]")#有沒有辦法改成找title
+signInButton = browser.find_element_by_id('loginBTN')
 signInButton.click()
 
-browser.close()
+# browser.close()
